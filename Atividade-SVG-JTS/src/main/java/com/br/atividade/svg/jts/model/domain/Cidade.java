@@ -4,28 +4,29 @@ import com.vividsolutions.jts.geom.Geometry;
 
 public class Cidade {
 
-    private String populacao;
+    private Integer populacao;
     private Geometry geom;
     private String nome;
-    private String area;
+    private Float area;
     private String svg;
 
     public Cidade() {
 
     }
 
-    public Cidade(String populacao, String nome, String area, String svg) {
+    public Cidade(Integer populacao, Geometry geom, String nome, Float area, String svg) {
         this.populacao = populacao;
+        this.geom = geom;
         this.nome = nome;
         this.area = area;
         this.svg = svg;
     }
 
-    public String getPopulacao() {
+    public Integer getPopulacao() {
         return populacao;
     }
 
-    public void setPopulacao(String populacao) {
+    public void setPopulacao(Integer populacao) {
         this.populacao = populacao;
     }
 
@@ -45,11 +46,11 @@ public class Cidade {
         this.nome = nome;
     }
 
-    public String getArea() {
+    public Float getArea() {
         return area;
     }
 
-    public void setArea(String area) {
+    public void setArea(Float area) {
         this.area = area;
     }
 
