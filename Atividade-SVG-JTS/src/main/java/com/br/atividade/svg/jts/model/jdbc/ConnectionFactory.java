@@ -1,4 +1,4 @@
-package com.br.atividade.svg.jts.model;
+package com.br.atividade.svg.jts.model.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
