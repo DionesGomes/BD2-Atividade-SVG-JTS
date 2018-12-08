@@ -19,3 +19,12 @@ body div {
 h1, h2, h3, h4, h5, h6, a {
 	text-align: center;
 }
+.divDown {
+	text-align: center;
+	width: 50.5vw;
+	margin-top: 20px;
+}
+
+#svg {
+	height: 200px
+}

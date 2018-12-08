@@ -2,69 +2,79 @@ package com.br.atividade.svg.jts.model.domain;
 
 import com.vividsolutions.jts.geom.Geometry;
 
+//import com.vividsolutions.jts.geom.Geometry;
+
 public class Cidade {
+	private String nome;
+	private Integer populacao;
+	private Float area;
+	private Geometry geom;
+	private String svg;
+	private Integer estado_id;
+	
+	public Cidade() {}
 
-    private Integer populacao;
-    private Geometry geom;
-    private String nome;
-    private Float area;
-    private String svg;
+	public String getNome() {
+		return nome;
+	}
 
-    public Cidade() {
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    }
+	public Integer getPopulacao() {
+		return populacao;
+	}
 
-    public Cidade(Integer populacao, Geometry geom, String nome, Float area, String svg) {
-        this.populacao = populacao;
-        this.geom = geom;
-        this.nome = nome;
-        this.area = area;
-        this.svg = svg;
-    }
+	public void setPopulacao(Integer populacao) {
+		this.populacao = populacao;
+	}
 
-    public Integer getPopulacao() {
-        return populacao;
-    }
+	public Float getDensidade_demo() {
+		return ((float)populacao)/area;
+	}
 
-    public void setPopulacao(Integer populacao) {
-        this.populacao = populacao;
-    }
+	public Float getArea() {
+		return area;
+	}
 
-    public Geometry getGeom() {
-        return geom;
-    }
+	public void setArea(Float area) {
+		this.area = area;
+	}
 
-    public void setGeom(Geometry geom) {
-        this.geom = geom;
-    }
+	public Geometry getGeom() {
+		return geom;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public void setGeom(Geometry geom) {
+		this.geom = geom;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public Float getPerimetro() {
+		return (float) (geom.getLength() * (40075/360));
+	}
 
-    public Float getArea() {
-        return area;
-    }
+	public String getSvg() {
+		return svg;
+	}
 
-    public void setArea(Float area) {
-        this.area = area;
-    }
+	public void setSvg(String svg) {
+		this.svg = svg;
+	}
 
-    public String getSvg() {
-        return svg;
-    }
+	@Override
+	public String toString() {
+		return "Cidade [nome=" + nome + ", populacao=" + populacao + ", area=" + area + "]";
+	}
 
-    public void setSvg(String svg) {
-        this.svg = svg;
-    }
+	public Integer getEstado_id() {
+		return estado_id;
+	}
 
-    @Override
-    public String toString() {
-        return "Cidade{" + "populacao=" + populacao + ", geom=" + geom + ", nome=" + nome + ", area=" + area + ", svg=" + svg + '}';
-    }
+	public void setEstado_id(Integer estado_id) {
+		this.estado_id = estado_id;
+	}
+	
 
+	
 }

@@ -1,18 +1,18 @@
 package com.br.atividade.svg.jts.model.dao;
 
 import com.br.atividade.svg.jts.model.domain.Cidade;
-import com.vividsolutions.jts.io.ParseException;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface CidadeDao {
+import com.vividsolutions.jts.io.ParseException;
 
-    Cidade buscarCidadeUF(String cidade, String estado) throws ClassNotFoundException, SQLException, ParseException;
+public interface CidadeDAO {
 
-    List<String> buscarNomeCidadeUF(String stado) throws ClassNotFoundException, SQLException;
+    Cidade buscarCidadeEstado(String cidade, String estado) throws ClassNotFoundException, SQLException, ParseException;
 
-    List<String> buscarNomeUF() throws ClassNotFoundException, SQLException;
+    List<String> buscarNomeCidadesEstado(String estado) throws ClassNotFoundException, SQLException;
 
-    String getViewBox(String cidade_1, String cidade_2) throws ClassNotFoundException, SQLException;
+    List<String> buscarNomeEstados() throws ClassNotFoundException, SQLException;
 
+    String getViewBox(Cidade cidade1, Cidade cidade2) throws ClassNotFoundException, SQLException;
 }
