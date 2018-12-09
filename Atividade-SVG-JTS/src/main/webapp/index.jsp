@@ -134,14 +134,14 @@
                     <label>Distância Aproximada: ${distancia} km</label></center><br>
                     <center>
                         <div id=svg>
-                            <center><svg viewBox="${viewBox}" width="581" height="200">
-                                <path d="${cidade1.getSvg()}" stroke="black" stroke-width="0.005" fill="orange" fill-opacity=""/>
-                                <path d="${cidade2.getSvg()}" stroke="black" stroke-width="0.005" fill="violet" fill-opacity=""/>
-                                </svg>
+                            <svg viewBox="${viewBox}" width="581" height="200">
+                            <path d="${cidade1.getSvg()}" stroke="black" stroke-width="0.005" fill="orange" fill-opacity=""/>
+                            <path d="${cidade2.getSvg()}" stroke="black" stroke-width="0.005" fill="violet" fill-opacity=""/>
+                            </svg>
                         </div>
-                    </center>
-            </form>
-        </div>        
-    </body>
 
-</html>
+                        </form>
+                </div>        
+                </body>
+
+                </html>

@@ -42,7 +42,7 @@ public class Controller extends HttpServlet {
         request.setAttribute("estado1", estadoNome1);
         request.setAttribute("estado2", estadoNome2);
         Cidade cidade1 = null, cidade2 = null;
-//--------------------------------------------------------------------------------------//		
+		
         if (!estadoNome1.equals("SELECIONE")) {
             try {
                 List<String> cidades1 = dao.buscarNomeCidadesEstado(estadoNome1);
@@ -57,7 +57,8 @@ public class Controller extends HttpServlet {
                 } catch (ClassNotFoundException | SQLException | ParseException e) {
                     e.printStackTrace();
                 }
-                request.setAttribute("cidadeNome1", cidadeNome1);//pode haver cidades com mesmo nome em estados diferentes
+                /*pode haver cidades com mesmo nome em estados diferentes*/
+                request.setAttribute("cidadeNome1", cidadeNome1);
             }
             estadoAnterior1 = estadoNome1;
         }
@@ -90,14 +91,14 @@ public class Controller extends HttpServlet {
             }
             request.setAttribute("distancia", dist);
         }
-//------------------------------------------------------------------------------------//		
+		
         try {
             List<String> estados = dao.buscarNomeEstados();
             request.setAttribute("estados", estados);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-//------------------------------------------------------------------------------------//		
+		
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
