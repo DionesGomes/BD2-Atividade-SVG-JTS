@@ -2,7 +2,6 @@ package com.br.atividade.svg.jts.model.dao;
 
 import com.br.atividade.svg.jts.model.domain.Cidade;
 import com.br.atividade.svg.jts.model.jdbc.ConnectionFactory;
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -110,5 +109,5 @@ public class CidadeDAOImpl implements CidadeDAO {
         }
         return null;
     }
-
+    
 }

@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.io.ParseException;
 
 @WebServlet("/inicio")
@@ -22,6 +21,7 @@ public class Controller extends HttpServlet {
     public static String estadoAnterior1 = "";
     public static String estadoAnterior2 = "";
 
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CidadeDAOImpl dao = new CidadeDAOImpl();
         try {
@@ -33,6 +33,7 @@ public class Controller extends HttpServlet {
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CidadeDAOImpl dao = new CidadeDAOImpl();
         String estadoNome1 = request.getParameter("estado1");

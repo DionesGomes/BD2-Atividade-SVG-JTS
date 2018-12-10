@@ -77,25 +77,25 @@
                 <!-- Mostrar os dados -->
                 <div class="row" id="esquerdo">
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="populacao" type="text" class="validate">
                             <label for="disabled">População: ${cidade1.getPopulacao()}</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="densidade" type="text" class="validate">
                             <label for="disabled">Densidade demográfica: ${cidade1.getDensidade_demo()} hab/Km²</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="area" type="text" class="validate">
                             <label for="disabled">Área: ${cidade1.getArea()} km²</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="perimetro" type="text" class="validate">
                             <label for="disabled">Perímetro: ${cidade1.getPerimetro()} km</label>
                         </div>
@@ -104,25 +104,25 @@
 
                 <div class="row" id="direito">
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="populacao" type="text" class="validate">
                             <label for="disabled">População: ${cidade2.getPopulacao()}</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="densidade" type="text" class="validate">
                             <label for="disabled">Densidade demográfica: ${cidade2.getDensidade_demo()} hab/Km²</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="area" type="text" class="validate">
                             <label for="disabled">Área: ${cidade2.getArea()} km²</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s5">
+                        <div class="input-field col s9">
                             <input disabled value="" id="perimetro" type="text" class="validate">
                             <label for="disabled">Perímetro: ${cidade2.getPerimetro()} km</label>
                         </div>
@@ -131,7 +131,7 @@
                 <br/>
 
                 <div class="divDown">
-                    <label>Distância Aproximada: ${distancia} km</label></center><br>
+                    <label>Distância Aproximada: ${distancia} km </label><br>
                     <center>
                         <div id=svg>
                             <center><svg viewBox="${viewBox}" width="581" height="200">
